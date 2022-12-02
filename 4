@@ -1,0 +1,18 @@
+%%
+auto|double|int|struct|break|else|long|switch|case|enum|register|typedef|char|extern|return|
+union|continue|for|signed|void|do|if|static|while|default|goto|sizeof|volatile|const|float|short
+printf(&quot;Is a keyword&quot;);
+[a-zA-Z]([a-zA-Z]|[0-9])* printf(&quot;Is an identifier&quot;);
+[0-9]+ printf(&quot;Is an integer&quot;);
+[&lt;|&gt;|&lt;=|&gt;=|==|!=] printf(&quot;Is a Relational Operator&quot;);
+.* printf(&quot;Invalid Expression&quot;);
+
+%%
+int yywrap(void)
+{
+}
+
+main() {
+printf(&quot;Enter a string: &quot;);
+  yylex();
+}
